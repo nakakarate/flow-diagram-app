@@ -33,7 +33,8 @@ const homeBtn = document.getElementById('home-btn');
 const renderButtons = () => {
     flowContainer.innerHTML = '';
     const currentButtons = flowStages[currentStage].buttons.filter(button =>
-        !selectedPath.length || flowStages[currentStage - 1].buttons.find(btn => btn.id === selectedPath[selectedPath.length - 1])?.nextOptions.includes(button.id)
+        !selectedPath.length || 
+        flowStages[currentStage - 1].buttons.find(btn => btn.id === selectedPath[selectedPath.length - 1])?.nextOptions.includes(button.id)
     );
 
     currentButtons.forEach(button => {
